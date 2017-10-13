@@ -2,4 +2,8 @@
 
 ## Introduction
 
-I am an introduction.
+## Organisation Plan
+
+## Conflict Resolution Plan
+
+## Peer Assessment Plan
