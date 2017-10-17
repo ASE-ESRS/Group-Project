@@ -1,7 +1,7 @@
 # ASE Group Project - Group ESRS
 
 ## Introduction
-This repository holds all of the code and documentation for submission as part of the group project for 947G5 Advanced Software Engineering.
+This repository holds all of the code and documentation for submission as part of the group project for **947G5 Advanced Software Engineering**.
 
 ## Project Structure
 For all source code and the Android Studio project, see the `/source` directory. For all documentation such as project plans and customer deliverables, see the `/documentation` directory.
