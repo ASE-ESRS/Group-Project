@@ -2,6 +2,16 @@
 
 ## Introduction
 
+To maximise the efficiency and professionalism of the team during the development of this project a project plan is detailed below. The aim of this plan is to:
+
+- Improve communications with the client, outlining who will be responsible for maintaining contact and ensuring the correct execution of tasks accordingly. 
+- Increase the transparency of our work by documenting the progress of the project development. 
+- Ensuring the organisation of the team with unanimously agreed tasks and deadlines. 
+- Set out the correct steps for conflict management within the team. 
+- Agree on a peer assessment plan for personal contributions towards the project. 
+
+With this plan in place, the end goal for the project should be clear throughout but also constant client communication and contribution should be maintained aiming for high customer satisfaction upon delivery. 
+
 ## Organisation Plan
 
 Nominating a team leader was one of our first objectives. Loic was voted in to oversee the gradual progress of the ASE project. 
@@ -13,6 +23,7 @@ Undoubtedly Loic will be communicating with each member of the team to figure ou
 If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team (excluding Loic) unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
 
 ## Conflict Resolution Plan
+
 With the day-to-day interactions that will occur during the course of this project, invariably differences will arise and there will be a conflict of some magnitude that will need to contend. To deal with this in a prompt and professional manner this conflict resolution plan will aim to act as a guide for resolving the issue. 
 
 Initially, it is expected that the parties involved in the conflict will discuss the issue together to try and reach a compromise between the two viewpoints. This would be done in a respectful manner to reach a mutually satisfactory conclusion. If requested by either or all parties involved in the conflict, as team leader, Loic will sit in on the meeting to act as an impartial voice to help the progress towards a solution. With compromising generally being a quick and effective technique, one would hope the majority of issues would be solved in this manner. 
@@ -24,7 +35,9 @@ If Loic is involved in the dispute, and there is another member of the team that
 Finally, in the case, a unanimous vote cannot be reached by the team, or it is a conflict the entire team are involved in, the team leader would be expected to remove themselves from the situation and make the final, unbiased and impartial decision. As the team are professional this decision will be respected and upheld. 
 
 ## Peer Assessment Plan
+
 The group will meet in the final week of the project deadline to complete the peer assessment. Each member will base their assessment on the following points:
+
 -	Helping explain things to others, helping other group members to learn and grow.
 -	Helping to detect and defuse conflicts in the group, and resolving disputes, disagreements and problems.
 -	Attendance and participation to group meetings, labs, work sessions etc.
