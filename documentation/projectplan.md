@@ -18,20 +18,20 @@ If for any reason Loic decides to step down, the team will nominate a team leade
 
 ## Peer Assessment Plan
 The group will meet in the final week of the project deadline to complete the peer assessment. Each member will base their assessment on the following points:
-•	Helping explain things to others, helping other group members to learn and grow.
-•	Helping to detect and defuse conflicts in the group, and resolving disputes, disagreements and problems.
-•	Attendance and participation to group meetings, labs, work sessions etc.
-•	Quality of work.
-•	Interest in the project.
-•	Overall level of participation.
-•	Understanding of what is required.
-•	Input for ideas, directions, features etc.
-•	Creative thinking, development of ideas.
-•	Performing routine tasks.
-•	Consolidating (e.g., drawing things together).
-•	Initiative: generating ideas for the activities and methods of solution. Findings ideas from other sources.
-•	Commitment: going a fair share of the work, meeting deadlines, attending meetings and being punctual.
-•	Conducive group behaviour: allowing other group members to have affair chance to contribute. Responding constructively to each other’s contributions.
+-	Helping explain things to others, helping other group members to learn and grow.
+-	Helping to detect and defuse conflicts in the group, and resolving disputes, disagreements and problems.
+-	Attendance and participation to group meetings, labs, work sessions etc.
+-	Quality of work.
+-	Interest in the project.
+-	Overall level of participation.
+-	Understanding of what is required.
+-	Input for ideas, directions, features etc.
+-	Creative thinking, development of ideas.
+-	Performing routine tasks.
+-	Consolidating (e.g., drawing things together).
+-	Initiative: generating ideas for the activities and methods of solution. Findings ideas from other sources.
+-	Commitment: going a fair share of the work, meeting deadlines, attending meetings and being punctual.
+-	Conducive group behaviour: allowing other group members to have affair chance to contribute. Responding constructively to each other’s contributions.
 
 To decide each members peer mark the other members of the group should assign a number of marks so that the total number of marks across all group members is equal to 100 (20x5). Using 20 as a reference mark for if all members made an equal contribution (as judged by the above bullet points), marks should be added or subtracted to this dependent on their input relative to the rest of the group. If a group member is judged to have contributed more than the average they should be allocated a peer mark above the reference mark reflecting them having done more than their “fair share”. This of course means that other member(s) of the group will then have to be allocated marks below the reference mark of 20 as they will be judged to have made a smaller contribution to the project in relation to the other member.
 
