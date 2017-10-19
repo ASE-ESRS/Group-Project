@@ -12,7 +12,7 @@ Undoubtedly Loic will be communicating with each member of the team to figure ou
 
 In the unlikely case of a dispute between team members, it is the role of the team leader to resolve the dispute and analyze as to why the dispute occured in the first place to ensure similar conflictions do not arise again. Loic should try to be neither bias or partial towards any member of the team, taking neutral ground whenever possible.
 
-If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
+If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team (excluding Loic) unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
 
 ## Conflict Resolution Plan
 
