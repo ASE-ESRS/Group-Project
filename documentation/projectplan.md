@@ -10,11 +10,18 @@ Loic shall act as the main source of communication between the team and the cust
 
 Undoubtedly Loic will be communicating with each member of the team to figure out each of our strengths and weaknesses for the future tasks to come, assigning us each appropriate roles. However, the role of leader does not exlude Loic from assisting the team in different areas; be it documentation, coding or testing, Loic will function as a team-player when needed. Loic will also act as a 'middle-man' between the different team roles; helping us to communicate with each other in an efficient manner. From our prior experience, it is evident communication is vital for all types of group projects where members are appointed different roles with different sub tasks.
 
-In the unlikely case of a dispute between team members, it is the role of the team leader to resolve the dispute and analyze as to why the dispute occured in the first place to ensure similar conflictions do not arise again. Loic should try to be neither bias or partial towards any member of the team, taking neutral ground whenever possible.
-
 If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team (excluding Loic) unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
 
 ## Conflict Resolution Plan
+With the day-to-day interactions that will occur during the course of this project, invariably differences will arise and there will be a conflict of some magnitude that will need to contend. To deal with this in a prompt and professional manner this conflict resolution plan will aim to act as a guide for resolving the issue. 
+
+Initially, it is expected that the parties involved in the conflict will discuss the issue together to try and reach a compromise between the two viewpoints. This would be done in a respectful manner to reach a mutually satisfactory conclusion. If requested by either or all parties involved in the conflict, as team leader, Loic will sit in on the meeting to act as an impartial voice to help the progress towards a solution. With compromising generally being a quick and effective technique, one would hope the majority of issues would be solved in this manner. 
+
+In the unlikely case of a dispute where a compromise cannot be reached by all parties involved, as team leader Loic will be expected to analyze the situation and in an unbiased and impartial manner decide on a solution that will be of the most benefit to the project. As all members of the team are professional in the workplace, this decision will be accepted without further negotiation. 
+
+If Loic is involved in the dispute, and there is another member of the team that is not directly involved, through a unanimous vote they will be appointed to have the final, unbiased and impartial decision on the matter that they feel will have the greatest benefit to the team. 
+
+Finally, in the case, a unanimous vote cannot be reached by the team, or it is a conflict the entire team are involved in, the team leader would be expected to remove themselves from the situation and make the final, unbiased and impartial decision. As the team are professional this decision will be respected and upheld. 
 
 ## Peer Assessment Plan
 The group will meet in the final week of the project deadline to complete the peer assessment. Each member will base their assessment on the following points:
