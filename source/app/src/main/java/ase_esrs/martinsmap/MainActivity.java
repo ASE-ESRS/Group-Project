@@ -10,6 +10,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,10 +27,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    GoogleMap googleMap;
-    double latitude;
-    double longitude;
-    MapFragment mapsFragment;
+    private GoogleMap googleMap;
+    private double latitude;
+    private double longitude;
+    private MapFragment mapsFragment;
+
+    private LocationListener locListener;
+
+    private final static int LOCATION_PERMISSION = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,51 +47,53 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             transaction.add(R.id.linear_layout, mapsFragment);
             transaction.commit();
 
-            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+            locListener = new LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
+                    latitude = location.getLatitude();
+                    longitude = location.getLongitude();
+                    updateMap();
+                }
+
+                @Override
+                public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                }
+
+                @Override
+                public void onProviderEnabled(String provider) {
+
+                }
+
+                @Override
+                public void onProviderDisabled(String provider) {
+
+                }
+            };
+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                latitude = 51.508530;
-                longitude = -0.076132;
-                Toast.makeText(this, "No location provided so showing London, UK", Toast.LENGTH_LONG).show();
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
+                        LOCATION_PERMISSION);
             } else {
                 latitude = 0;
                 longitude = 0;
                 LocationManager lm = (LocationManager) MainActivity.this.getSystemService(Context.LOCATION_SERVICE);
-                lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 50, new LocationListener() {
-                    @Override
-                    public void onLocationChanged(Location location) {
-                        latitude = location.getLatitude();
-                        longitude = location.getLongitude();
-                        updateMap();
-                    }
-
-                    @Override
-                    public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                    }
-
-                    @Override
-                    public void onProviderEnabled(String provider) {
-
-                    }
-
-                    @Override
-                    public void onProviderDisabled(String provider) {
-
-                    }
-                });
+                lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 50, locListener);
             }
-        } catch(RuntimeException re) {
+        } catch (RuntimeException re) {
             Log.e("Martins Map", re.getMessage());
-        } catch(Exception e) {
+        } catch (Exception e) {
             Log.e("Martins Map", e.getMessage());
         }
     }
 
     void updateMap() {
-        if(googleMap == null) {
+        if (googleMap == null) {
             mapsFragment.getMapAsync(this);
         } else {
-            if(latitude != 0 && longitude != 0){
+            if (latitude != 0 && longitude != 0) {
                 googleMap.clear();
                 LatLng loc = new LatLng(latitude, longitude);
                 Toast.makeText(this, "Updating location", Toast.LENGTH_SHORT).show();
@@ -96,6 +103,30 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 googleMap.moveCamera(move);
                 googleMap.animateCamera(zoom);
             }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case LOCATION_PERMISSION:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    latitude = 0;
+                    longitude = 0;
+                    LocationManager lm = (LocationManager) MainActivity.this.getSystemService(Context.LOCATION_SERVICE);
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                            && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 50, locListener);
+                    } else {
+                        Toast.makeText(this, "No location provided", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(this, "No location provided", Toast.LENGTH_LONG).show();
+                }
+                break;
+            default:
+                break;
         }
     }
 
