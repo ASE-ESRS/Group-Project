@@ -4,7 +4,7 @@
 
 To maximise the efficiency and professionalism of the team during the development of this project a project plan is detailed below. The aim of this plan is to:
 
-- Improve communications with the client, outlining who will be responsible for maintaining contact and ensuring the correct execution of tasks accordingly. 
+- Improve communications with the client, outlining who will be responsible for maintaining contact, and ensuring the correct execution of tasks accordingly. 
 - Increase the transparency of our work by documenting the progress of the project development. 
 - Ensuring the organisation of the team with unanimously agreed tasks and deadlines. 
 - Set out the correct steps for conflict management within the team. 
@@ -16,11 +16,11 @@ With this plan in place, the end goal for the project should be clear throughout
 
 Nominating a team leader was one of our first objectives. Loic was voted in to oversee the gradual progress of the ASE project. 
 
-Loic shall act as the main source of communication between the team and the customer. If a team member does not understand a task or specification, it is up to Loic to question the customer to pin-point exact information regarding the task and/or specification. Once a task has been completed and sufficently evalated by the team and Loic, the customer will be presented with the finished product through Loic only.
+Loic shall act as the main source of communication between the team and the customer. If a team member does not understand a task or specification, it is up to Loic to question the customer to pin-point exact information regarding the task and/or specification. Once a task has been completed and sufficently evaluated by the team and Loic, the customer will be presented with the milestones via Loic only.
 
 Undoubtedly Loic will be communicating with each member of the team to figure out each of our strengths and weaknesses for the future tasks to come, assigning us each appropriate roles. However, the role of leader does not exlude Loic from assisting the team in different areas; be it documentation, coding or testing, Loic will function as a team-player when needed. Loic will also act as a 'middle-man' between the different team roles; helping us to communicate with each other in an efficient manner. From our prior experience, it is evident communication is vital for all types of group projects where members are appointed different roles with different sub tasks.
 
-If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team (excluding Loic) unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
+If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team (excluding Loic) unanimously decide that Loic isn't performing up to the team's expectations, the team have the right to call a re-vote for a new project leader.
 
 ## Conflict Resolution Plan
 
@@ -53,7 +53,7 @@ The group will meet in the final week of the project deadline to complete the pe
 -	Commitment: going a fair share of the work, meeting deadlines, attending meetings and being punctual.
 -	Conducive group behaviour: allowing other group members to have affair chance to contribute. Responding constructively to each other’s contributions.
 
-To decide each members peer mark the other members of the group should assign a number of marks so that the total number of marks across all group members is equal to 100 (20x5). Using 20 as a reference mark for if all members made an equal contribution (as judged by the above bullet points), marks should be added or subtracted to this dependent on their input relative to the rest of the group. If a group member is judged to have contributed more than the average they should be allocated a peer mark above the reference mark reflecting them having done more than their “fair share”. This of course means that other member(s) of the group will then have to be allocated marks below the reference mark of 20 as they will be judged to have made a smaller contribution to the project in relation to the other member.
+To decide each member's peer mark the other members of the group should assign a number of marks so that the total number of marks across all group members is equal to 100 (20 * 5). Using 20 as a reference mark for if all members made an equal contribution (as judged by the above bullet points), marks should be added or subtracted to this dependent on their input relative to the rest of the group. If a group member is judged to have contributed more than the average they should be allocated a peer mark above the reference mark reflecting them having done more than their “fair share”. This of course means that other member(s) of the group will then have to be allocated marks below the reference mark of 20 as they will be judged to have made a smaller contribution to the project in relation to the other member.
 
 Ideally the marks for each group member can be agreed on unanimously after a group discussion. The project deliverables can be used to reflect on each group members input as well reviewing the meeting minutes to review what work they were assigned to complete. If a unanimous agreement is not forthcoming then each group member should assign 20 marks between the other members of the group (excluding themselves), the total marks that each member is assigned represents their peer mark.
 
