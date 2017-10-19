@@ -14,8 +14,6 @@ In the unlikely case of a dispute between team members, it is the role of the te
 
 If for any reason Loic decides to step down, the team will nominate a team leader promptly to ensure the project is not jeopardized. Equally if the team unanimously decide that Loic isn't performing up to the teams standard, the team have the right to call a re-vote for a new project leader.
 
-Hello Cunts
-
 ## Conflict Resolution Plan
 
 ## Peer Assessment Plan
