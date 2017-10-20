@@ -31,65 +31,61 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private double latitude;
     private double longitude;
     private MapFragment mapsFragment;
-
     private LocationListener locListener;
-
     private final static int LOCATION_PERMISSION = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        try {
-            mapsFragment = new MapFragment();
-            FragmentManager fragmentManager = MainActivity.this.getFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.add(R.id.linear_layout, mapsFragment);
-            transaction.commit();
+        mapsFragment = new MapFragment();
+        FragmentManager fragmentManager = MainActivity.this.getFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.linear_layout, mapsFragment);
+        transaction.commit();
 
-            locListener = new LocationListener() {
-                @Override
-                public void onLocationChanged(Location location) {
-                    latitude = location.getLatitude();
-                    longitude = location.getLongitude();
-                    updateMap();
-                }
-
-                @Override
-                public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                }
-
-                @Override
-                public void onProviderEnabled(String provider) {
-
-                }
-
-                @Override
-                public void onProviderDisabled(String provider) {
-
-                }
-            };
-
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
-                        LOCATION_PERMISSION);
-            } else {
-                latitude = 0;
-                longitude = 0;
-                LocationManager lm = (LocationManager) MainActivity.this.getSystemService(Context.LOCATION_SERVICE);
-                lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 50, locListener);
+        locListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                latitude = location.getLatitude();
+                longitude = location.getLongitude();
+                updateMap();
             }
-        } catch (RuntimeException re) {
-            Log.e("Martins Map", re.getMessage());
-        } catch (Exception e) {
-            Log.e("Martins Map", e.getMessage());
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
+                    LOCATION_PERMISSION);
+        } else {
+            latitude = 0;
+            longitude = 0;
+            LocationManager lm = (LocationManager) MainActivity.this.getSystemService(Context.LOCATION_SERVICE);
+            lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 50, locListener);
         }
     }
 
-    void updateMap() {
+    /**
+     * If the Google Map Fragment does not yet exist, request one. Otherwise,
+     * clear the map and put a marker at the user's location.
+     */
+    private void updateMap() {
         if (googleMap == null) {
             mapsFragment.getMapAsync(this);
         } else {
