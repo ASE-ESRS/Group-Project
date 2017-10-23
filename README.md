@@ -1,7 +1,7 @@
 # ASE Group Project - Group ESRS
 
 ## Introduction
-This repository holds all of the code and documentation for submission as part of the group project for 947G5 Advanced Software Engineering.
+This repository holds all of the code and documentation for submission as part of the group project for **947G5 Advanced Software Engineering**.
 
 ## Android APK
 At every release this projects a signed APK is generated and placed in the following location:
