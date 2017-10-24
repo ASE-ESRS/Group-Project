@@ -1,1 +1,4 @@
 .DS_Store
+
+# Shell script Loic uses to pull changes from the upstream (ASE-ESRS) repo.
+fetch.sh
