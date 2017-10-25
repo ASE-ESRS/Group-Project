@@ -8,19 +8,19 @@ exports.handler = (event, context, callback) => {
     // Extract the userId parameter.
     let userIdInput = event.userId;
     if (userIdInput == null || userIdInput == "") {
-        abortLocationUpdate("NO USERID SUPPLIED", callback);
+        abortLocationUpdate("Invalid/absent userId parameter", callback);
     }
 
     // Extract the `latitude` parameter.
     let latitudeInput = event.latitude;
     if (latitudeInput == null || latitudeInput == "") {
-        abortLocationUpdate("NO LATITUDE SUPPLIED", callback);
+        abortLocationUpdate("Invalid/absent latitude parameter", callback);
     }
 
     // Extract the `longitude` parameter.
     let longitudeInput = event.longitude;
     if (longitudeInput == null || longitudeInput == "") {
-        abortLocationUpdate("NO LONGITUDE SUPPLIED", callback);
+        abortLocationUpdate("Invalid/absent longitude parameter", callback);
     }
 
     // At this point, we assume that the input is valid and correctly formed.
@@ -42,12 +42,11 @@ exports.handler = (event, context, callback) => {
         "Item" : locationItem
     }, function(error, data) {
         if (error) {
-            abortLocationUpdate("ERROR: INSERTING ITEM INTO DYNAMODB FAILED: " + error, callback);
+            abortLocationUpdate("Inserting location update into DynamoDB failed: " + error, callback);
         } else {
             callback(null, {
-                "statusCode" : 200,
-                "headers" : { "Content-Type" : "text/html" },
-                "body" : "SUCCESSFULLY ENTERED RECORD: userId: " + locationItem
+                "status" : "success",
+                "message" : "Successfully entered the following location update: " + locationItem
             });
         }
     });
@@ -55,8 +54,7 @@ exports.handler = (event, context, callback) => {
 
 function abortLocationUpdate(reason, callback) {
     callback(null, {
-        "statusCode" : 200,
-        "headers" : { "Content-Type" : "text/html" },
-        "body" : reason
+        "status" : "error",
+        "message" : reason
     });
 }
