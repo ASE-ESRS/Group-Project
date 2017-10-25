@@ -1,29 +1,25 @@
+let k_TABLE_NAME = "locations";
+
 var doc = require('dynamodb-doc');
 var dynamodb = new doc.DynamoDB();
 
 exports.handler = (event, context, callback) => {
-    console.log(event.latitude);
     // Carry out input validation on the request's parameters.
-    if (typeof event["queryStringParameters"] == 'undefined' || event["queryStringParameters"] == null) {
-        abortLocationUpdate("NO INPUT SUPPLIED", callback);
-        return;
-    }
-
     // Extract the userId parameter.
-    let userId = event["queryStringParameters"]['userId'];
-    if (userId == null || userId == "") {
+    let userIdInput = event.userId;
+    if (userIdInput == null || userIdInput == "") {
         abortLocationUpdate("NO USERID SUPPLIED", callback);
     }
 
     // Extract the `latitude` parameter.
-    let latitude = event["queryStringParameters"]['latitude'];
-    if (latitude == null || latitude == "") {
+    let latitudeInput = event.latitude;
+    if (latitudeInput == null || latitudeInput == "") {
         abortLocationUpdate("NO LATITUDE SUPPLIED", callback);
     }
 
     // Extract the `longitude` parameter.
-    let longitude = event["queryStringParameters"]['longitude'];
-    if (longitude == null || longitude == "") {
+    let longitudeInput = event.longitude;
+    if (longitudeInput == null || longitudeInput == "") {
         abortLocationUpdate("NO LONGITUDE SUPPLIED", callback);
     }
 
@@ -32,15 +28,18 @@ exports.handler = (event, context, callback) => {
     // Make a note of the current time.
     let currentDateTime = new Date().toString();
 
+    // Create the new location entry item.
+    var locationItem = {
+        userId : userIdInput,
+        date : currentDateTime,
+        latitude : latitudeInput,
+        longitude : longitudeInput
+    };
+
     // Insert a new record into the `locations` DynamoDB table.
     dynamodb.putItem({
-        "TableName" : "locations",
-        "Item" : {
-            "userId"    : { "S" : userId },
-            "date"      : { "S" : currentDateTime },
-            "latitude"  : { "S" : latitude },
-            "longitude" : { "S" : longitude }
-        }
+        "TableName" : k_TABLE_NAME,
+        "Item" : locationItem
     }, function(error, data) {
         if (error) {
             abortLocationUpdate("ERROR: INSERTING ITEM INTO DYNAMODB FAILED: " + error, callback);
@@ -48,7 +47,7 @@ exports.handler = (event, context, callback) => {
             callback(null, {
                 "statusCode" : 200,
                 "headers" : { "Content-Type" : "text/html" },
-                "body" : "SUCCESSFULLY ENTERED RECORD: userId: " + userId + ", latitude: " + latitude + ", longitude: " + longitude
+                "body" : "SUCCESSFULLY ENTERED RECORD: userId: " + locationItem
             });
         }
     });
