@@ -63,7 +63,6 @@ exports.handler = (event, context, callback) => {
             abortLocationUpdate("Failed inserting location update into DynamoDB: " + error, callback);
         } else {
             callback(null, {
-                // `statusCode` : 200 indicates success.
                 "statusCode" : 200,
                 "headers" : { "Content-Type" : "application/json" },
                 "body" : {
@@ -78,8 +77,7 @@ exports.handler = (event, context, callback) => {
 // This function simply reports an error back to the client.
 function abortLocationUpdate(reason, callback) {
     callback(null, {
-        // `statusCode` : 201 indicates error.
-        "statusCode" : 201,
+        "statusCode" : 200,
         "headers" : { "Content-Type" : "application/json" },
         "body" : {
             "status" : "error",
