@@ -21,4 +21,4 @@ The names of the ESRS Group members are listed here:
 - Loic Verrall
 
 ## Contributing
-Before forking this repository and making pull requests, read `/CONTRIBUTING.md`
+Before forking this repository and making pull requests, read `/CONTRIBUTING.md`.
