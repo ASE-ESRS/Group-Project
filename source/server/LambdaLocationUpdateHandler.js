@@ -19,32 +19,37 @@ let k_TABLE_NAME = "locations";
 // The following parameters are expected in the request:
 //  - `userId` a unique identifier (e.g. email address) for this device (used as DB primary key).
 //  - `latitude` the current latitude of the user (expected in ISO 6709 format - https://en.wikipedia.org/wiki/ISO_6709).
-//  - `longitude` the current longitude of the user (expected in ISO 6709 format.
+//  - `longitude` the current longitude of the user (expected in ISO 6709 format.)
+
+// To print a log in the console use -> console.log('value1 =', event.key1);
+
 exports.handler = (event, context, callback) => {
     // Carry out input validation on the request's parameters.
+
     // Extract the userId parameter.
-    let userIdInput = event.userId;
-    if (userIdInput == null || userIdInput == "") {
-        abortLocationUpdate("Invalid/absent userId parameter", callback);
+    let userIdInput = event.queryStringParameters.userId;
+    if (!(hexReg(userIdInput))){
+        abortLocationUpdate("Invalid user ID", callback);
     }
 
-    // Extract the `latitude` parameter.
-    let latitudeInput = event.latitude;
-    if (latitudeInput == null || latitudeInput == "") {
-        abortLocationUpdate("Invalid/absent latitude parameter", callback);
+    // Extract the `latitude` parameter and validate.
+    let latitudeInput = event.queryStringParameters.latitude;
+    if(!(longLatReg(latitudeInput))) {
+        abortLocationUpdate("Invalid latitude parameter", callback);
     }
 
-    // Extract the `longitude` parameter.
-    let longitudeInput = event.longitude;
-    if (longitudeInput == null || longitudeInput == "") {
-        abortLocationUpdate("Invalid/absent longitude parameter", callback);
+    // Extract the `longitude` parameter and validate.
+    let longitudeInput = event.queryStringParameters.longitude;
+    if(!(longLatReg(longitudeInput))) {
+        abortLocationUpdate("Invalid longitude parameter", callback);
     }
 
-    // TODO: Perform more extensive input validation (e.g. length of latitude, etc.)
+    // ----------------------------------------------------------------------
     // At this point, we assume that the input is valid and correctly formed.
+    // ----------------------------------------------------------------------
 
     // Make a note of the current time.
-    let currentDateTime = new Date().toString();
+    let currentDateTime = new Date().toISOString();
 
     // Create the new location entry item.
     var locationItem = {
@@ -65,10 +70,10 @@ exports.handler = (event, context, callback) => {
             callback(null, {
                 "statusCode" : 200,
                 "headers" : { "Content-Type" : "application/json" },
-                "body" : {
+                "body" : JSON.stringify({
                     "status" : "success",
-                    "message" : "Successfully entered the following location update: " + JSON.stringify(locationItem)
-                }
+                    "message" : "Successfully updated location"
+                })
             });
         }
     });
@@ -79,9 +84,22 @@ function abortLocationUpdate(reason, callback) {
     callback(null, {
         "statusCode" : 200,
         "headers" : { "Content-Type" : "application/json" },
-        "body" : {
+        "body" : JSON.stringify({
             "status" : "error",
             "message" : reason
-        }
+        })
     });
+}
+
+// this is a function to check for a hexidecimal value and a length of 64 characters.
+function hexReg(s) {
+    var regExp = /[0-9A-Fa-f]{64}/g;
+    return (regExp.test(s));
+}
+
+// this function checks the latitude and lonitude follow the correct format.
+function longLatReg(l){
+    // regex for latitude and longitude.
+    var regExp = /(\-?\d+(\.\d+)?)/;
+    return regExp.test(l);
 }
