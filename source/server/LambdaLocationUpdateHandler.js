@@ -93,7 +93,7 @@ function abortLocationUpdate(reason, callback) {
 
 // this is a function to check for a hexidecimal value and a length of 64 characters.
 function hexReg(s) {
-    var regExp = /[0-9A-Fa-f]{64}/g;
+    var regExp = /[0-9A-Fa-f]{16}/g;
     return (regExp.test(s));
 }
 
