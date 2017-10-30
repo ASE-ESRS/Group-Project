@@ -1,12 +1,10 @@
 language: android
 android:
-	components:
-		- tools
-		- platform-tools
-		- tools
-		
-		# SDK version:
-		- build-tools-25.0.2
-		- android-25
-		
+  components:
+    - tools
+    - platform-tools
+    - tools
+    # SDK version:
+    - build-tools-25.0.2
+    - android-25		
 before_script: cd source/client
