@@ -58,3 +58,19 @@ To decide each member's peer mark the other members of the group should assign a
 Ideally the marks for each group member can be agreed on unanimously after a group discussion. The project deliverables can be used to reflect on each group members input as well reviewing the meeting minutes to review what work they were assigned to complete. If a unanimous agreement is not forthcoming then each group member should assign 20 marks between the other members of the group (excluding themselves), the total marks that each member is assigned represents their peer mark.
 
 All group members should at least agree, if not be entirely happy, that the assigned peer marks are a reasonable reflection on the spread of contribution across the group members for the entire project, and sign the peer assessment document to indicate this. If one or more group members disagree they should have the right to argue their case and can use the produced body of work as evidence if desired. If a unanimous agreement is not reached then the peer mark produced as per the above paragraph will be final. A peer mark of 0 is taken as a sign that the team member contributed nothing to the project.
+
+## Testing
+
+//Add section about how, when, how much and testing automation when we actually have tests.//
+
+## Code Review
+
+Using github, we created a main repository which each member of the team forks from. This allows us complete seperation from each others modified code. Similar to Google and and Facebook, before a forked branch is allowed to be merged into the main  branch, code review must happen. Our method of code review is that a different member of the team is required to accept the push request before said branch is merged. //Add something about hooks and that new software Dan recommended//
+
+## Methodology
+
+As a team we have chosen to take an agile approach to the tasks at hand. Different from the  waterfall approach, we believe as a small team of 5 a more robust way of working will keep us constantly reviewing, updating and modifing our software. Since tasks are specified sequentially, we are able to assign members of the team relevant roles according to the sub-tasks provided to us by the team leader or another member. To expand on these 'sub-tasks', we use a feature found on GitHub called 'issues'. Here we are able to post a comment on what is missing from a tasks deliverables.
+
+Mentioned above, communication is key to ensure the team is working in a competent manner. We chose to use Slack as a main platform for non-person-communication. Slack offers the ability to add 'bots' which announce modifcations to our main repository, seperates communication among different channels and allows the upload of files. Several Slack channels have been assigned for different components of the tasks presented, for example we have a channel for 'server-side' development and a channel for 'client-side' development. Each conversation should occur in the correct channel to ensure there is no miscommunication.
+
+
