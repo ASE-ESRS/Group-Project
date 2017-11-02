@@ -1,6 +1,5 @@
-<aside class="warning">
+## IMPORTANT
 This codebase is now deprecated. The code listed here only supports up to version 2.0 of the project. For newer versions, see the [server repository](https://github.com/ASE-ESRS/MARTIN-server) and the [client repository](https://github.com/ASE-ESRS/MARTIN-client).
-</aside>
 
 # ASE Group Project - Group ESRS
 
