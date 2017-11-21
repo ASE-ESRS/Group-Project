@@ -34,7 +34,10 @@ Even tasks that don't contribute directly to the final submission should be incl
 
 | Task                           | Description                               | Duration    |
 | :----------------------------- |:----------------------------------------- | -----------:|
-| Example Task                   | This task entailed these things.          | xh          |
+| Project Plan                   | Writing up the project plan for tasks 1&2 | 2h |
+| Test Documentation | Documenting how we are testing, looking closely at different techniques available to us | 2h |
+| Research into Mocha, Chai and Assert libraries | Learning how to test with node.js using Mocha and the Assert library | 15h|
+| Writing test cases | Series of unit tests for the server-side part of task 4, refactoring index.js to allow testing | 10h |
 
 ***
 
