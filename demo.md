@@ -8,3 +8,6 @@
     - Programmer B carries out a code review and identifies the problem, suggests changes.
     - Programmer A corrects their mistake and updates PR.
     - Programmer B reviews again and then merges.
+3. Discuss and show the Issues section on GitHub as our way of tracking remaining tasks and bugs.
+4. Talk about Pair Programming.
+5. Task about (automated) testing with TravisCI.
