@@ -3,6 +3,7 @@
 Run the client-side and retrieving results (choose small radius).
 
 ## Software Engineering Practises
+
 **Process Demo**
     - Programmer A makes a change that causes a unit test to fail.
     - Programmer A commits, pushes, and creates a PR for their change.
