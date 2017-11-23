@@ -27,6 +27,10 @@ Even tasks that don't contribute directly to the final submission should be incl
 | Task                           | Description                               | Duration    |
 | :----------------------------- |:----------------------------------------- | -----------:|
 | Example Task                   | This task entailed these things.          | xh          |
+| Android Research | Research into fundementals of coding for Android, and relevant tools. | 7h |
+| Project Plan | Writing up the project plan for Task 1&2. | 2h |
+| Peer Programming | Peer programming with Daniel Arthur on the heat map functionality including unit tests. | 6h |
+| Server-Side Debugging | Debugging the Server Side latitude/longitude functionality for Task4. | 2h |
 
 ***
 
