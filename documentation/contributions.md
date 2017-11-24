@@ -10,7 +10,13 @@ Even tasks that don't contribute directly to the final submission should be incl
 
 | Task                           | Description                               | Duration    |
 | :----------------------------- |:----------------------------------------- | -----------:|
-| Example Task                   | This task entailed these things.          | xh          |
+| Client Side Testing Framework | Set up the client side with the Mocha framework to enable unit testing that was then carried out by Alex Tang. | 2h |
+| Continuous Integration | Set up continuous integration on both the client and server side, using Travis CI to automatically build both repos, as well as publish code maintainability reports and test coverage reports onto GitHub. In the case of the server side code, Travis CI automatically deploys the code to the AWS servers. | 6h |
+| Android Programming | Set up the initial Android app that works with the Google Maps API to produce a simple map. This task also involved a lot of research (6h reading) on how the Android OS works and understanding the separate components of an Android Application. | 10h |
+| Pair Programming | Pair programming with Mark Paice on the heat map functionality including unit tests. | 6h |
+| Pair Programming | Pair programming with Loic Verrall integrating his settings menu UI with the rest of the app. | 2h |
+| Code Reviews | Reviewing Pull Requests for both server and client side on GitHub and reviewing code line-by-line to ensure its quality before being pushed to the server or making it into the client side codebase. | 13h |
+| Debugging Server Side | When faced with an Internal Server Error, helped the server side team to discover a bug that was not responding to the client with well-formed HTTP responses. | 1h |
 
 ***
 
@@ -28,7 +34,7 @@ Even tasks that don't contribute directly to the final submission should be incl
 | :----------------------------- |:----------------------------------------- | -----------:|
 | Android Research | Research into fundementals of coding for Android, and relevant tools. | 7h |
 | Project Plan | Writing up the project plan for Task 1&2. | 2h |
-| Peer Programming | Peer programming with Daniel Arthur on the heat map functionality including unit tests. | 6h |
+| Pair Programming | Peer programming with Daniel Arthur on the heat map functionality including unit tests. | 6h |
 | Server-Side Debugging | Debugging the Server Side latitude/longitude functionality for Task4. | 2h |
 
 ***
