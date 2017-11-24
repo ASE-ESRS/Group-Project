@@ -51,6 +51,7 @@ Even tasks that don't contribute directly to the final submission should be incl
 | [`process-postcodes.py`](https://github.com/LoicVerrall/MARTIN-server/blob/master/preprocessing/process_postcodes.py) | Python script to take the 4 GB input dataset, extract information, convert postcodes to latitude/longitude, and upload to AWS. | 22h |
 | [`index.js`](https://github.com/LoicVerrall/MARTIN-server/blob/master/index.js) | Accepts requests from the Task 3 client-side and inserts location records in DynamoDB | 21h |
 | [`store_location_price.js`](https://github.com/LoicVerrall/MARTIN-server/blob/master/preprocessing/store_location_price.js) | Accepts POST requests from the `process-postcodes.py` program and inserts price-paid datapoints into DynamoDB | 6h |
+| Search Radius Setting | Worked on adding a Settings screen with a slider to control the search radius to the client-side + JUnit tests | 10h |
 | [General Documentation](https://github.com/LoicVerrall/MARTIN-server/blob/master/README.md) | Documentation of the server-side          | 3h          |
 | Google Dev/AWS | Time spent researching/trying to get working Google Drive/AWS (including figuring out Lambda functions)          | 15h          |
 | Code Reviews | Time spent reviewing various Pull Requests          | 3h          |
