@@ -41,6 +41,9 @@ Even tasks that don't contribute directly to the final submission should be incl
 | Test Documentation | Documenting how we are testing, looking closely at different techniques available to us | 2h |
 | Research into ['Mocha'](https://mochajs.org/#assertions), ['Chai'](http://chaijs.com/guide/styles/#assert) and ['Assert'](https://nodejs.org/api/assert.html) libraries | Learning how to test with node.js using Mocha and the Assert library | 15h|
 | Writing test cases | Series of unit tests for the server-side part of task 4, refactoring index.js to allow testing | 10h |
+| Refactoring Unit Tests | Server-side code had a few bugs, newest implementation required refactroing some test cases| 8h |
+| General Documentation | All around formatting and editing | 1h |
+| Code Reviews | Time spent reviewing various Pull Requests          | 2h          |
 
 ***
 
