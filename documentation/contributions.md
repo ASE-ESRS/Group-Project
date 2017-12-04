@@ -63,4 +63,5 @@ Even tasks that don't contribute directly to the final submission should be incl
 | Search Radius Setting | Worked on adding a Settings screen with a slider to control the search radius to the client-side + JUnit tests | 10h |
 | [General Documentation](https://github.com/LoicVerrall/MARTIN-server/blob/master/README.md) | Documentation of the server-side          | 3h          |
 | Google Dev/AWS | Time spent researching/trying to get working Google Drive/AWS (including figuring out Lambda functions)          | 15h          |
+| Task 4 Bug-fix | Fixing the bug that caused Task 4 to stop working unexpectedly          | 3h          |
 | Code Reviews | Time spent reviewing various Pull Requests          | 3h          |
