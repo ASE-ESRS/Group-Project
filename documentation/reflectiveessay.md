@@ -40,4 +40,4 @@ Coveralls reports on the code coverage of both the client and server-side code a
 
 
 
-// Also discuss stuff from out project plan.
+// Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
