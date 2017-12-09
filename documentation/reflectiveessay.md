@@ -18,6 +18,9 @@ GitHub's `Issues` feature has been used as a 'todo' list to track remaining task
 // Why Travis CI
 // Why Node.js, AWS, and mocha?
 
+### DynamoDB
+Discuss how the index was unable to help us as it required that we knew the exact latitude, rather than using a range.
+
 ### Coding
 
 ##### Pair Programming
