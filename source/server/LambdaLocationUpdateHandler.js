@@ -25,31 +25,31 @@ let k_TABLE_NAME = "locations";
 
 exports.handler = (event, context, callback) => {
     // Carry out input validation on the request's parameters.
-    
+
+
     // Extract the userId parameter.
-    let userIdInput = event.key1;
+    let userIdInput = event.queryStringParameters.userId;
     if (!(hexReg(userIdInput))){
-        abortLocationUpdate("userId not in Hex format", callback);
+        abortLocationUpdate("Invalid user ID", callback);
     }
-    
+
     // Extract the `latitude` parameter and validate.
-    let latitudeInput = event.key2;
+    let latitudeInput = event.queryStringParameters.latitude;
     if(!(longLatReg(latitudeInput))) {
         abortLocationUpdate("Invalid latitude parameter", callback);
     }
 
     // Extract the `longitude` parameter and validate.
-    let longitudeInput = event.key3;
+    let longitudeInput = event.queryStringParameters.longitude;
     if(!(longLatReg(longitudeInput))) {
         abortLocationUpdate("Invalid longitude parameter", callback);
     }
-    
+
     // ----------------------------------------------------------------------
     // At this point, we assume that the input is valid and correctly formed.
     // ----------------------------------------------------------------------
-    
     // Make a note of the current time.
-    let currentDateTime = new Date().toString();
+    let currentDateTime = new Date().toISOString();
 
     // Create the new location entry item.
     var locationItem = {
@@ -70,10 +70,10 @@ exports.handler = (event, context, callback) => {
             callback(null, {
                 "statusCode" : 200,
                 "headers" : { "Content-Type" : "application/json" },
-                "body" : {
+                "body" : JSON.stringify({
                     "status" : "success",
-                    "message" : "Successfully entered the following location update: " + JSON.stringify(locationItem)
-                }
+                    "message" : "Successfully updated location"
+                })
             });
         }
     });
@@ -84,16 +84,16 @@ function abortLocationUpdate(reason, callback) {
     callback(null, {
         "statusCode" : 200,
         "headers" : { "Content-Type" : "application/json" },
-        "body" : {
+        "body" : JSON.stringify({
             "status" : "error",
             "message" : reason
-        }
+        })
     });
 }
 
 // this is a function to check for a hexidecimal value and a length of 64 characters.
 function hexReg(s) {
-    var regExp = /[0-9A-Fa-f]{64}/g;
+    var regExp = /[0-9A-Fa-f]{16}/g;
     return (regExp.test(s));
 }
 
@@ -101,5 +101,5 @@ function hexReg(s) {
 function longLatReg(l){
     // regex for latitude and longitude.
     var regExp = /(\-?\d+(\.\d+)?)/;
-    return regExp.test(l)
+    return regExp.test(l);
 }
