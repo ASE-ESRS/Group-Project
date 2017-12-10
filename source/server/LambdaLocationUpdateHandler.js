@@ -26,6 +26,7 @@ let k_TABLE_NAME = "locations";
 exports.handler = (event, context, callback) => {
     // Carry out input validation on the request's parameters.
 
+
     // Extract the userId parameter.
     let userIdInput = event.queryStringParameters.userId;
     if (!(hexReg(userIdInput))){
@@ -47,7 +48,6 @@ exports.handler = (event, context, callback) => {
     // ----------------------------------------------------------------------
     // At this point, we assume that the input is valid and correctly formed.
     // ----------------------------------------------------------------------
-
     // Make a note of the current time.
     let currentDateTime = new Date().toISOString();
 
