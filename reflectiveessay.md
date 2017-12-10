@@ -144,6 +144,16 @@ A rather less significant issue, this time relating to our build process, was th
 
 As mentioned above, the server-side code takes more time than that to execute and so the function is prematurely terminated unless the `timeout` parameter is manually adjusted.
 
+### Future Work
+
+###### Average Large Return Datasets
+
+One limitation of the app in its current state is that you can only select a search radius up to 20km. The reason for this restriction is that the server will attempt to return all results within the specified vicinity of the client.
+
+It's not hard to imagine that this scales badly and, at some threshold, breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
+
+A better solution might be to, before returning the data-points to the client, have the server average (cluster together) data-points so that no more than some threshold number of data-points are returned.
+
 ---
 
 // Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
