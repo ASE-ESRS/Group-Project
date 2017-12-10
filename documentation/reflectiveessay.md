@@ -40,7 +40,10 @@ Code Climate is used to enforce light-weight coding standards (e.g. no method ca
 ##### Code Coverage
 Coveralls reports on the code coverage of both the client and server-side code after each pull request is made.
 
+### Known Issues 
+Need to discuss that the server-side implementation is slow and that indexes do not help. // Loic will talk about this
 
+When Travis autodeployed a new build of the server-side code, the `timeout` parameter of the Lambda function is reset to 3 seconds. If it is not manually updated, timeout errors are thrown and the client-side will report a network error to the user.
 
 
 // Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
