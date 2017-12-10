@@ -130,9 +130,20 @@ We did face issues with Coveralls during the development process. Getting it to 
 
 ### Known Issues
 
-Need to discuss that the server-side implementation is slow and that indexes do not help. // Loic will talk about this
+###### Server-Side Performance
 
-When Travis auto-deployed a new build of the server-side code, the `timeout` parameter of the Lambda function is reset to 3 seconds. If it is not manually updated, timeout errors are thrown and the client-side will report a network error to the user.
+Probably the most severe remaining unsolved problem pertained to the performance of the server-side program. Most API calls to the server-side take between 10 - 15 seconds to return which is, for a modern-day application, unacceptable.
 
+Currently, when a request is made, the server runs through the entire table (containing millions of data-points) to check whether each one lies within the bounds of a specified rectangle.
+
+As an attempt to speed this up, an index was created on the `latitude` attribute. This resulted in very fast random access when querying for specific data-points, but this specificity was, in fact, the reason this method was fundamentally unable to work.
+
+###### Travis Not Updating Timeout
+
+A rather less significant issue, this time relating to our build process, was that when Travis auto-deployed a new built of the server-side code (after a merge into the `master` branch), the `timeout` parameter for the Lambda function is reset to the default of 3 seconds.
+
+As mentioned above, the server-side code takes more time than that to execute and so the function is prematurely terminated unless the `timeout` parameter is manually adjusted.
+
+---
 
 // Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
