@@ -125,8 +125,18 @@ We did face issues with Coveralls during the development process. Getting it to 
 
 ### Logging / Error Monitoring
 
-- AWS Logging software for dealing with server exceptions.
-- Custom logging added as part of Task 5.
+###### CloudWatch
+
+The built-in AWS logging system proved invaluable in helping to debug a whole host of different issues. Helpful error messages were thrown, such as:
+> Timeout limit (3 seconds) exceeded
+
+This led to rapid bug fixing efforts that would have otherwise taken much longer.
+
+###### Custom Logging
+
+As part of Task 5, the team decided it would be beneficial to implement a custom light-weight logging mechanism that would make a record of each request made to the server.
+
+Information about the request, such as the coordinate search radius and whether the request was successfully responded to, was stored with each entry in the `requests_log` table.
 
 ### Known Issues
 
