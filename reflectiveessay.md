@@ -99,23 +99,27 @@ We found this to be an efficient and effective way to communicate issues within 
 
 *** GitHub should probably be put into its own "Version Control" section ***
 
-## Testing
+### Testing
 
-*** NEED MORE INFO ON TESTING ***
-- Nature of tests
-    - Automated with Code Climate tool
-    - How they are constructed, why they're good
-    - How is Oracle problem dealt with
-    - Why testing has been an issue
-    - Test quality
-    - Test coverage (Server and Client)
+    // TODO: NEED MORE INFO ON TESTING ***
+    - Nature of tests
+        - Automated with Code Climate tool
+        - How they are constructed, why they're good
+        - How is Oracle problem dealt with
+        - Why testing has been an issue
+        - Test quality
+        - Test coverage (Server and Client)
 
-### Unit Testing
 
-Unit testing was carried out on both logical sides of our development, Server-Side and Client-Side. Due to the modularity that had been introduced by Code Climate, the units of code were found to be very easy to test. Each unit test was designed to test one method with some specific arguments put into that method to test for an expected result. Tests were carried out for an expected, successful output, edge cases were tested as well as an input that would cause the method to fail.
+###### Unit Testing
 
-To implement unit tests that returned a satisfactory code coverage was found to be harder than first expected. This made the testing process problematic as seen by a code coverage of only 44% after the task 4 specification was met. To rectify this we had to look at the testing structure and where problems were arising. We found a 'module.exports' file to be causing the problems and this had to be completely re-factored to work smoothly with all the methods, including the event handler. By returning to the testing process in more detail to rectify problems raised by code-climate we were able to vastly improve to maintainability and effectiveness of our tests as well as the overall overage we were able to achieve.
+Code Climate (discussed above) encouraged modular code and this made large amounts of unit testing (on both the server-side and the client-side) trivial.
 
+Each unit test was designed to test one method with some specific arguments put into that method to test for an expected result. Tests were carried out for an expected, successful output, edge cases were tested as well as an input that would cause the method to fail.
+
+There were, however, fairly large sections of code that proved problematic to test — in particular, those relating to interface (e.g. on the client). On the server-side, the entry point for the program was a handler function for AWS's request object. This could not be mocked, and nor could the HTTP response code.
+
+Code coverage (discussed below) reported a fairly low (less than 50% on the server-side) coverage report after Task 4. Following this, a lot of work went into refactoring the server-side to be more modular, and this allowed test coverage to improve by more than 10%.
 
 ### Code Coverage
 
