@@ -119,9 +119,13 @@ To implement unit tests that returned a satisfactory code coverage was found to 
 
 ### Code Coverage
 
-As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made. This allowed a clear indication of how effective our testing was and was a good visual indication of where more time should be spent.
+As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made.
 
-We did face issues with Coveralls during the development process. Getting it to integrate with our codebase was a struggle on the server side and near impossible on the client side for the majority of the project. This had to be revisited later in the development process to get the client side working. We found these integration issues with our codebase to be extremely problematic. The feature was originally chosen to be a good visual indicator when making pull requests to the master branch and is a common practice that was intuitive to include within the project. Including the problems had with integrating coveralls into out project the value of the system is easy to see and when working is a very useful tool for the team.
+This allowed a clear indication of how effective our testing was and discouraged merging pull requests that did not improve the overall test coverage.
+
+Initially, we faced issues integrating the automatic coverage reports with GitHub, but these issues were resolved subsequently. It was convenient to place badges on the front of the GitHub pages to allow all team members to get an at-a-glance feel of the current coverage.
+
+The team found code coverage a useful addition to the project as it acted as a good indicator of whether or not a pull request should be merged or adjusted first.
 
 ### Logging / Error Monitoring
 
