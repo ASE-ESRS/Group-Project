@@ -57,11 +57,10 @@ A disadvantage of this approach was that it did slow down the coding process, bu
 Programming as a team, getting together and all working on the app at the same time was found to be very beneficial to the software engineering process. Creating an atmosphere reflective of a work environment allowed the team to motivate each other and progress was found to be far faster when working as a group than individually. This also allowed for easy pair programming and instantaneous code reviews, drastically speeding up all aspects of the development. This is an aspect that as a team we would try to set aside more time for and implement if this process was to be conducted again.
 
 ### Version Control
-- Code reviews
-    - Checklists
-    - Follow-Ups
-    - Roles
-    - Issue Tracking (Pull Requests to drive code review)
+    
+##### GitHub
+
+Github was chosen as the version control manager for our codebase. As well as being an industry used piece of software it was the logical choice to keep the team co-ordinated, aligned and increase poductivity. It allowed the poject to be split into its logical sections with a Master development branch forked by each team member. From here development could be continued, reviewed and then merged into the master branch. Successfully setting up the GitHub project and implementing the features avaliable (Code Reviews, Issue Tracking etc) was a major improvement from previous projects and has been a major success for the team with the whole team being in agreement they would use GitHub for any future software engineering projects. 
 
 ##### Code Quality
 
@@ -91,13 +90,11 @@ While members of the team were working remotely on the project, Salck played a k
 
 Slack was found to be an exceptionally useful tool and its use will be continued into future projects. It has been key to the success of the team by maintaining free and open communication as well as providing both local and mobile updates at the project progressed.
 
-#### Github
+#### Github Communication
 
-Within GitHub, you are given the ability to raise issues with the rest of the team within that repository. As our repository was logically split into the sections people would work on it was easy to raise these area-specific issues with the group, use labels to set a priority to the issue and assign it to a member with the most experience within that area to look into. This was very much used in a 'to-do' list style, not only focussing on very urgent issues that needed attention but also for more general issues within the app that would need attention over the course of the software engineering process.
+As well as the general use of GitHub, there are some specific features that were incredibly useful for communication. There is the ability to raise issues with the rest of the team within that repository. As our repository was logically split into the sections people would work on it was easy to raise these area-specific issues with the group, use labels to set a priority to the issue and assign it to a member with the most experience within that area to look into. This was very much used in a 'to-do' list style, not only focussing on very urgent issues that needed attention but also for more general issues within the app that would need attention over the course of the software engineering process.
 
 We found this to be an efficient and effective way to communicate issues within the project due to GitHub being linked to Slack, so these issues would be communicated to the team automatically. Although very helpful the issues on GitHub could have been better utilised within the project to keep track of issues within the project more efficiently while allowing issue specific comments kept on that thread allowing a quick reference for the team. Aside from using these more effectively in the future they were an asset to the team and found to be very helpful in the software engineering process.
-
-*** GitHub should probably be put into its own "Version Control" section ***
 
 ## Testing
 
@@ -119,9 +116,7 @@ To implement unit tests that returned a satisfactory code coverage was found to 
 
 ### Code Coverage
 
-As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made.
-
-This allowed a clear indication of how effective our testing was and discouraged merging pull requests that did not improve the overall test coverage.
+As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made. This allowed a clear indication of how effective our testing was and discouraged merging pull requests that did not improve the overall test coverage.
 
 Initially, we faced issues integrating the automatic coverage reports with GitHub, but these issues were resolved subsequently. It was convenient to place badges on the front of the GitHub pages to allow all team members to get an at-a-glance feel of the current coverage.
 
@@ -134,11 +129,11 @@ The team found code coverage a useful addition to the project as it acted as a g
 The built-in AWS logging system proved invaluable in helping to debug a whole host of different issues. Helpful error messages were thrown, such as:
 > Timeout limit (3 seconds) exceeded
 
-This led to rapid bug fixing efforts that would have otherwise taken much longer.
+This led to rapid bug fixing efforts that would have otherwise taken much longer. It demonstrated the importance and effectiveness of logging to the team and encouraged us to implement logging into the application for all requests. The use and implementation of server logs, an area never previously visited before this project, can be seen as one of the software engineering successes uring the development process. 
 
 ###### Custom Logging
 
-As part of Task 5, the team decided it would be beneficial to implement a custom light-weight logging mechanism that would make a record of each request made to the server.
+It was as part of Task 5 the team implemented the custom light-weight logging mechanism to make a record of each request made to the server.
 
 Information about the request, such as the coordinate search radius and whether the request was successfully responded to, was stored with each entry in the `requests_log` table.
 
@@ -164,7 +159,7 @@ As mentioned above, the server-side code takes more time than that to execute an
 
 One limitation of the app in its current state is that you can only select a search radius up to 20km. The reason for this restriction is that the server will attempt to return all results within the specified vicinity of the client.
 
-It's not hard to imagine that this scales badly and, at some threshold, breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
+It's not hard to imagine that this scales badly due to a server exception caused by the body of the HTTP response being too large. This means at some threshold, returning the relevant data breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
 
 A better solution might be to, before returning the data-points to the client, have the server average (cluster together) data-points so that no more than some threshold number of data-points are returned.
 
