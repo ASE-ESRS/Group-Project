@@ -75,8 +75,17 @@ This was found to be a very unnatural way of programming at first and adjustment
 Overall this process of increasing the quality of our code forced maintainable code to be made with more thought going into the logical structure the code could take. Although unaware of a benefit of this when setting up code climate, this made for very testable code allowing the separated methods to be thoroughly tested to increase the coverage our tests were able to attain. With the extra effort taken into account, this was seen as a very useful addition to the software engineering process.
 
 ### Automated build process
-- Travis CI
-- GitHub Badges
+
+#### Travis CI
+
+Travis CI was implemented to allow the automatic testing and deployment of code to Amazon Web Service. It was chosen due to being easily integrated into github, its multi-language support, ability to test directly on every pull request made and then the automatic and configurable deployment to AWS. 
+
+Having a clean enirmoent to allow the visulisation and parallel running of tests with visual indicators as well as automatic communication with Slack were all seen as incredibly useful tools for automating these aspects of our development process. The speed increase that has been achieved by implementing Travis as well as the container infastructure has made the tool helpful and learning how to use this tool successfully has been another of the software engirneering successes of the project. 
+
+#### GitHub Badges
+
+Github has the ability to add badges to pull requests to allow for easy visulisation code coverage and the result of the test suite on the code. This is a nice addition to the information avaliable on GitHub and allows for future integration for other badges, such as the version bagde. Although only a small change to the development process the extra, easily visible information has been found to be useful and a nice addition. 
+
 
 ### Group Communication
 
