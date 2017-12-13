@@ -16,10 +16,8 @@ Listed below are the changes that have been carried out for Task 5 of the ESRS p
 
 - Persistent saving of options.
 
-### Not Implemented Yet
-
 - Add Police data to client-side.
 
-###### Not Happening...
+###### Not Implemented
 
 - Improve server performance (speed), perhaps by using an index.
