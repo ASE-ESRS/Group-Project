@@ -57,15 +57,10 @@ A disadvantage of this approach was that it did slow down the coding process, bu
 Programming as a team, getting together and all working on the app at the same time was found to be very beneficial to the software engineering process. Creating an atmosphere reflective of a work environment allowed the team to motivate each other and progress was found to be far faster when working as a group than individually. This also allowed for easy pair programming and instantaneous code reviews, drastically speeding up all aspects of the development. This is an aspect that as a team we would try to set aside more time for and implement if this process was to be conducted again.
 
 ### Version Control
-- Code reviews
-    - Checklists
-    - Follow-Ups
-    - Roles
-    - Issue Tracking (Pull Requests to drive code review)
 
-##### Code Quality
+##### GitHub
 
-Code quality was assured through the heavy use of code reviews within GitHub. Pull requests from a team members fork to the master branch were used to dive these reviews. We stated within our team a rule that you were unable to merge your own pull request to the master branch, meaning at least one other person would have to review your code before it could be integrated. This process of pull requests was found to be time-consuming but very helpful for highlighting issues within the code with GitHub allowing these issues to be effectively communicated for an efficient resolution, allowing the request to be approved and merged.
+Github was chosen as the version control manager for our codebase. As well as being an industry used piece of software it was the logical choice to keep the team co-ordinated, aligned and increase poductivity. It allowed the poject to be split into its logical sections with a Master development branch forked by each team member. From here development could be continued, reviewed and then merged into the master branch. Successfully setting up the GitHub project and implementing the features avaliable (Code Reviews, Issue Tracking etc) was a major improvement from previous projects and has been a major success for the team with the whole team being in agreement they would use GitHub for any future software engineering projects. 
 
 ##### Code Quality
 
@@ -76,8 +71,16 @@ This was found to be a very unnatural way of programming at first and adjustment
 Overall this process of increasing the quality of our code forced maintainable code to be made with more thought going into the logical structure the code could take. Although unaware of a benefit of this when setting up code climate, this made for very testable code allowing the separated methods to be thoroughly tested to increase the coverage our tests were able to attain. With the extra effort taken into account, this was seen as a very useful addition to the software engineering process.
 
 ### Automated build process
-- Travis CI
-- GitHub Badges
+
+#### Travis CI
+
+Travis CI was implemented to allow the automatic testing and deployment of code to Amazon Web Service. It was chosen due to being easily integrated into github, its multi-language support, ability to test directly on every pull request made and then the automatic and configurable deployment to AWS. 
+
+Having a clean enirmoent to allow the visulisation and parallel running of tests with visual indicators as well as automatic communication with Slack were all seen as incredibly useful tools for automating these aspects of our development process. The speed increase that has been achieved by implementing Travis as well as the container infastructure has made the tool helpful and learning how to use this tool successfully has been another of the software engirneering successes of the project. 
+
+#### GitHub Badges
+
+Github has the ability to add badges to pull requests to allow for easy visulisation code coverage and the result of the test suite on the code. This is a nice addition to the information avaliable on GitHub and allows for future integration for other badges, such as the version bagde. Although only a small change to the development process the extra, easily visible information has been found to be useful and a nice addition. 
 
 ### Group Communication
 
