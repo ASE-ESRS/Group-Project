@@ -1,29 +1,22 @@
 # Reflective Essay
 
-> #### Martin's Task 5 Description
-
-> Describe a feature of your group's software engineering process that you found especially helpful. Explain the feature in some detail, and why it was helpful. I suggest looking at the project plan because you will then be able to say which ideas in the project plan worked well and which didn't. That might give your group ideas for what to write in the reflective essay.
-
-> Describe a feature of your group's software engineering process that was problematic. Explain the feature in some detail, and the kinds of problems you had with it. Discuss why your group choose this feature originally. Where the problems encountered anticipated? Then suggest how to do better.
-
----
-
 This project focused on building a mobile phone application for the Android platform backed by a server-side hosted on Amazon Web Services (AWS).
 
 A product description was given by the customer. The description detailed an application to display Land Registry database data showing the ownership of property in England and Wales on a heat-map.
 
-This specification was enhanced once the above criteria were met to add more functionality to the application. On the backend of the applications server side speed was examined as well as the logging of requests to the server. The overall code coverage and quality of our tests was an area for improvement as well as increasing the maintainability of the code.
+This specification was added to over the course of the project to add more functionality to the application. The overall code coverage and quality of our tests was an area for improvement as well as increasing the maintainability of the code.
 
 On the front end, we looked to dynamically adjust the heat map sensitivity, shown in the display colours, to be relative to the area being viewed by the user. The user could enter a postcode / drop a pin on the map to view a specific location or remain using the phones GPS signal. More settings were added to the phone's settings for increased user interaction as well as the national crime statistics being introduced to the application to be alongside the price data.
 
-
 ## Specifications and Dealing with Ambiguity
 
-As the description of the project was left ambiguous the team had to come up with a process to set a more structured set of requirements. This was done by going through the description as a team and deciding on unambiguous requirements followed by contacting the client for clarification on any of the issues. This was found to be a good way of dealing with the ambiguity and worked well for both the team and the client. To improve on this in future a more structured and defined list of specifications in a document would have provided extra clarity of what exactly needs to be met, allowing for a larger picture for the modules being developed to fit into.
+As the description of the project was left somewhat ambiguous the team had to come up with a process to set a more structured set of requirements. This was done by going through the description as a team and deciding on unambiguous requirements followed by contacting the client for clarification on any of the issues. This was found to be a good way of dealing with the lack of specificity and worked well for both the team and the client.
 
 ### App Quality
 
-To ensure the quality of the application we gathered as a team to go through the ambiguous description and make unanimous decisions on which features to go with as a starting point and then also to list some extension tasks for the development based on progress within the agile sprint. By having the team together to decide on these features, which were then confirmed with the customer, it ensured the whole team had the same endpoint for the application and were working towards a unanimous goal. We found this to be very useful for maintaining a high-quality within the application.
+To ensure the quality of the application we gathered as a team to go through the ambiguous description and make unanimous decisions on which features to go with as a starting point and then also to list some extension tasks for the development based on progress within the agile sprint.
+
+By having the team together to decide on these features, which were then confirmed with the customer, it ensured the whole team had the same endpoint for the application and were working towards a unanimous goal. We found this to be very useful for maintaining a high-quality within the application.
 
 ### Team Structure
 
@@ -32,7 +25,6 @@ To maintain a structure to the team it was decided at an early stage to appoint 
 Within the team, the decision was taken to split into the logical sides of the project, a server-side team and a client-side team. This was a general parting with all members able to have an input to the other but created a general line to focus the team on their individual sections. This was found to work well at the beginning of the project but as more complex issues arose, for example testing and code-reviews, there was more of a cross-over within the team.
 
 As testing became a large part of the process this forked off to become a third branch of the team. It required a large amount of time and attention, therefore having a dedicated section for this with members able to crossover and input into the team was a logical progression. This was found to work well with the team taking an interdisciplinary approach to the groups while still maintaining core roles.
-
 
 ## Cloud Server and Database
 
@@ -57,14 +49,10 @@ A disadvantage of this approach was that it did slow down the coding process, bu
 Programming as a team, getting together and all working on the app at the same time was found to be very beneficial to the software engineering process. Creating an atmosphere reflective of a work environment allowed the team to motivate each other and progress was found to be far faster when working as a group than individually. This also allowed for easy pair programming and instantaneous code reviews, drastically speeding up all aspects of the development. This is an aspect that as a team we would try to set aside more time for and implement if this process was to be conducted again.
 
 ### Version Control
-    
+
 ##### GitHub
 
 Github was chosen as the version control manager for our codebase. As well as being an industry used piece of software it was the logical choice to keep the team co-ordinated, aligned and increase poductivity. It allowed the poject to be split into its logical sections with a Master development branch forked by each team member. From here development could be continued, reviewed and then merged into the master branch. Successfully setting up the GitHub project and implementing the features avaliable (Code Reviews, Issue Tracking etc) was a major improvement from previous projects and has been a major success for the team with the whole team being in agreement they would use GitHub for any future software engineering projects. 
-
-##### Code Quality
-
-Code quality was assured through the heavy use of code reviews within GitHub. Pull requests from a team members fork to the master branch were used to dive these reviews. We stated within our team a rule that you were unable to merge your own pull request to the master branch, meaning at least one other person would have to review your code before it could be integrated. This process of pull requests was found to be time-consuming but very helpful for highlighting issues within the code with GitHub allowing these issues to be effectively communicated for an efficient resolution, allowing the request to be approved and merged.
 
 ##### Code Quality
 
@@ -86,7 +74,6 @@ Having a clean enirmoent to allow the visulisation and parallel running of tests
 
 Github has the ability to add badges to pull requests to allow for easy visulisation code coverage and the result of the test suite on the code. This is a nice addition to the information avaliable on GitHub and allows for future integration for other badges, such as the version bagde. Although only a small change to the development process the extra, easily visible information has been found to be useful and a nice addition. 
 
-
 ### Group Communication
 
 #### Slack
@@ -99,30 +86,31 @@ While members of the team were working remotely on the project, Salck played a k
 
 Slack was found to be an exceptionally useful tool and its use will be continued into future projects. It has been key to the success of the team by maintaining free and open communication as well as providing both local and mobile updates at the project progressed.
 
-#### Github Communication
+#### Github
 
-As well as the general use of GitHub, there are some specific features that were incredibly useful for communication. There is the ability to raise issues with the rest of the team within that repository. As our repository was logically split into the sections people would work on it was easy to raise these area-specific issues with the group, use labels to set a priority to the issue and assign it to a member with the most experience within that area to look into. This was very much used in a 'to-do' list style, not only focussing on very urgent issues that needed attention but also for more general issues within the app that would need attention over the course of the software engineering process.
+Within GitHub, you are given the ability to raise issues with the rest of the team within that repository. As our repository was logically split into the sections people would work on it was easy to raise these area-specific issues with the group, use labels to set a priority to the issue and assign it to a member with the most experience within that area to look into. This was very much used in a 'to-do' list style, not only focussing on very urgent issues that needed attention but also for more general issues within the app that would need attention over the course of the software engineering process.
 
 We found this to be an efficient and effective way to communicate issues within the project due to GitHub being linked to Slack, so these issues would be communicated to the team automatically. Although very helpful the issues on GitHub could have been better utilised within the project to keep track of issues within the project more efficiently while allowing issue specific comments kept on that thread allowing a quick reference for the team. Aside from using these more effectively in the future they were an asset to the team and found to be very helpful in the software engineering process.
 
-## Testing
+*** GitHub should probably be put into its own "Version Control" section ***
 
-*** NEED MORE INFO ON TESTING ***
-- Nature of tests
-    - How is Oracle problem dealt with
+### Testing
 
-### Unit Testing
+###### Unit Testing
 
-Unit testing was carried out on both logical sides of our development, Server-Side and Client-Side. Due to the modularity that had been introduced by Code Climate, the units of code were found to be very easy to test. Each unit test was designed to test one method with some specific arguments put into that method to test for an expected result. Tests were carried out for an expected, successful output, edge cases were tested as well as an input that would cause the method to fail.
+Code Climate (discussed above) encouraged modular code and this made large amounts of unit testing (on both the server-side and the client-side) trivial.
 
-The main library used for testing purposes was 'mocha'. One of the favourites for many JavaScript developers, Mocha allows testing of lambda functions, testing of asynchronous code and addition of assertions. For the server side especially, adding assertions was fundamentally important to ensure no invalid paramters are being used for any lambda function. On the other hand, Mochas' assertion library is drastically smaller than that of 'Chai', another top of the line JS testing framework.
+Each unit test was designed to test one method with some specific arguments put into that method to test for an expected result. Tests were carried out for an expected, successful output, edge cases were tested as well as an input that would cause the method to fail.
 
-To implement unit tests that returned a satisfactory code coverage was found to be harder than first expected. This made the testing process problematic as seen by a code coverage of only 44% after the task 4 specification was met. To rectify this we had to look at the testing structure and where problems were arising. We found a 'module.exports' file to be causing the problems and this had to be completely re-factored to work smoothly with all the methods, including the event handler. By returning to the testing process in more detail to rectify problems raised by code-climate we were able to vastly improve to maintainability and effectiveness of our tests as well as the overall overage we were able to achieve.
+There were, however, fairly large sections of code that proved problematic to test — in particular, those relating to interface (e.g. on the client). On the server-side, the entry point for the program was a handler function for AWS's request object. This could not be mocked, and nor could the HTTP response code.
 
+Code coverage (discussed below) reported a fairly low (less than 50% on the server-side) coverage report after Task 4. Following this, a lot of work went into refactoring the server-side to be more modular, and this allowed test coverage to improve by more than 10%.
 
 ### Code Coverage
 
-As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made. This allowed a clear indication of how effective our testing was and discouraged merging pull requests that did not improve the overall test coverage.
+As briefly mentioned in a previous section, Coveralls was used to report on the coverage of both the client and server-side code after each pull request was made.
+
+This allowed a clear indication of how effective our testing was and discouraged merging pull requests that did not improve the overall test coverage.
 
 Initially, we faced issues integrating the automatic coverage reports with GitHub, but these issues were resolved subsequently. It was convenient to place badges on the front of the GitHub pages to allow all team members to get an at-a-glance feel of the current coverage.
 
@@ -135,11 +123,11 @@ The team found code coverage a useful addition to the project as it acted as a g
 The built-in AWS logging system proved invaluable in helping to debug a whole host of different issues. Helpful error messages were thrown, such as:
 > Timeout limit (3 seconds) exceeded
 
-This led to rapid bug fixing efforts that would have otherwise taken much longer. It demonstrated the importance and effectiveness of logging to the team and encouraged us to implement logging into the application for all requests. The use and implementation of server logs, an area never previously visited before this project, can be seen as one of the software engineering successes uring the development process. 
+This led to rapid bug fixing efforts that would have otherwise taken much longer.
 
 ###### Custom Logging
 
-It was as part of Task 5 the team implemented the custom light-weight logging mechanism to make a record of each request made to the server.
+As part of Task 5, the team decided it would be beneficial to implement a custom light-weight logging mechanism that would make a record of each request made to the server.
 
 Information about the request, such as the coordinate search radius and whether the request was successfully responded to, was stored with each entry in the `requests_log` table.
 
@@ -165,10 +153,6 @@ As mentioned above, the server-side code takes more time than that to execute an
 
 One limitation of the app in its current state is that you can only select a search radius up to 20km. The reason for this restriction is that the server will attempt to return all results within the specified vicinity of the client.
 
-It's not hard to imagine that this scales badly due to a server exception caused by the body of the HTTP response being too large. This means at some threshold, returning the relevant data breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
+It's not hard to imagine that this scales badly and, at some threshold, breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
 
 A better solution might be to, before returning the data-points to the client, have the server average (cluster together) data-points so that no more than some threshold number of data-points are returned.
-
----
-
-// Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
