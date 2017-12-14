@@ -1,29 +1,22 @@
 # Reflective Essay
 
-> #### Martin's Task 5 Description
-
-> Describe a feature of your group's software engineering process that you found especially helpful. Explain the feature in some detail, and why it was helpful. I suggest looking at the project plan because you will then be able to say which ideas in the project plan worked well and which didn't. That might give your group ideas for what to write in the reflective essay.
-
-> Describe a feature of your group's software engineering process that was problematic. Explain the feature in some detail, and the kinds of problems you had with it. Discuss why your group choose this feature originally. Where the problems encountered anticipated? Then suggest how to do better.
-
----
-
 This project focused on building a mobile phone application for the Android platform backed by a server-side hosted on Amazon Web Services (AWS).
 
 A product description was given by the customer. The description detailed an application to display Land Registry database data showing the ownership of property in England and Wales on a heat-map.
 
-This specification was enhanced once the above criteria were met to add more functionality to the application. On the backend of the applications server side speed was examined as well as the logging of requests to the server. The overall code coverage and quality of our tests was an area for improvement as well as increasing the maintainability of the code.
+This specification was added to over the course of the project to add more functionality to the application. The overall code coverage and quality of our tests was an area for improvement as well as increasing the maintainability of the code.
 
 On the front end, we looked to dynamically adjust the heat map sensitivity, shown in the display colours, to be relative to the area being viewed by the user. The user could enter a postcode / drop a pin on the map to view a specific location or remain using the phones GPS signal. More settings were added to the phone's settings for increased user interaction as well as the national crime statistics being introduced to the application to be alongside the price data.
 
-
 ## Specifications and Dealing with Ambiguity
 
-As the description of the project was left ambiguous the team had to come up with a process to set a more structured set of requirements. This was done by going through the description as a team and deciding on unambiguous requirements followed by contacting the client for clarification on any of the issues. This was found to be a good way of dealing with the ambiguity and worked well for both the team and the client. To improve on this in future a more structured and defined list of specifications in a document would have provided extra clarity of what exactly needs to be met, allowing for a larger picture for the modules being developed to fit into.
+As the description of the project was left somewhat ambiguous the team had to come up with a process to set a more structured set of requirements. This was done by going through the description as a team and deciding on unambiguous requirements followed by contacting the client for clarification on any of the issues. This was found to be a good way of dealing with the lack of specificity and worked well for both the team and the client.
 
 ### App Quality
 
-To ensure the quality of the application we gathered as a team to go through the ambiguous description and make unanimous decisions on which features to go with as a starting point and then also to list some extension tasks for the development based on progress within the agile sprint. By having the team together to decide on these features, which were then confirmed with the customer, it ensured the whole team had the same endpoint for the application and were working towards a unanimous goal. We found this to be very useful for maintaining a high-quality within the application.
+To ensure the quality of the application we gathered as a team to go through the ambiguous description and make unanimous decisions on which features to go with as a starting point and then also to list some extension tasks for the development based on progress within the agile sprint.
+
+By having the team together to decide on these features, which were then confirmed with the customer, it ensured the whole team had the same endpoint for the application and were working towards a unanimous goal. We found this to be very useful for maintaining a high-quality within the application.
 
 ### Team Structure
 
@@ -32,7 +25,6 @@ To maintain a structure to the team it was decided at an early stage to appoint 
 Within the team, the decision was taken to split into the logical sides of the project, a server-side team and a client-side team. This was a general parting with all members able to have an input to the other but created a general line to focus the team on their individual sections. This was found to work well at the beginning of the project but as more complex issues arose, for example testing and code-reviews, there was more of a cross-over within the team.
 
 As testing became a large part of the process this forked off to become a third branch of the team. It required a large amount of time and attention, therefore having a dedicated section for this with members able to crossover and input into the team was a logical progression. This was found to work well with the team taking an interdisciplinary approach to the groups while still maintaining core roles.
-
 
 ## Cloud Server and Database
 
@@ -104,16 +96,6 @@ We found this to be an efficient and effective way to communicate issues within 
 
 ### Testing
 
-    // TODO: NEED MORE INFO ON TESTING ***
-    - Nature of tests
-        - Automated with Code Climate tool
-        - How they are constructed, why they're good
-        - How is Oracle problem dealt with
-        - Why testing has been an issue
-        - Test quality
-        - Test coverage (Server and Client)
-
-
 ###### Unit Testing
 
 Code Climate (discussed above) encouraged modular code and this made large amounts of unit testing (on both the server-side and the client-side) trivial.
@@ -174,7 +156,3 @@ One limitation of the app in its current state is that you can only select a sea
 It's not hard to imagine that this scales badly and, at some threshold, breaks down altogether. Consider the case of the user selecting a search radius that encompasses the entire country. Even if the server returned these results, it would be in the order of gigabytes.
 
 A better solution might be to, before returning the data-points to the client, have the server average (cluster together) data-points so that no more than some threshold number of data-points are returned.
-
----
-
-// Also discuss stuff from out project plan. https://github.com/LoicVerrall/Group-Project/blob/master/documentation/projectplan.md
