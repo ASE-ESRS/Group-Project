@@ -86,14 +86,6 @@ While members of the team were working remotely on the project, Salck played a k
 
 Slack was found to be an exceptionally useful tool and its use will be continued into future projects. It has been key to the success of the team by maintaining free and open communication as well as providing both local and mobile updates at the project progressed.
 
-#### Github
-
-Within GitHub, you are given the ability to raise issues with the rest of the team within that repository. As our repository was logically split into the sections people would work on it was easy to raise these area-specific issues with the group, use labels to set a priority to the issue and assign it to a member with the most experience within that area to look into. This was very much used in a 'to-do' list style, not only focussing on very urgent issues that needed attention but also for more general issues within the app that would need attention over the course of the software engineering process.
-
-We found this to be an efficient and effective way to communicate issues within the project due to GitHub being linked to Slack, so these issues would be communicated to the team automatically. Although very helpful the issues on GitHub could have been better utilised within the project to keep track of issues within the project more efficiently while allowing issue specific comments kept on that thread allowing a quick reference for the team. Aside from using these more effectively in the future they were an asset to the team and found to be very helpful in the software engineering process.
-
-*** GitHub should probably be put into its own "Version Control" section ***
-
 ### Testing
 
 ###### Unit Testing
